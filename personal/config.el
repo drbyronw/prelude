@@ -22,14 +22,10 @@
 (require 'prelude-helm-everywhere)
 (require 'prelude-helm)
 (require 'prelude-key-chord)
-(require 'prelude-ivy)
+;; (require 'prelude-ivy)
 
-(setq-default cursor-type 'bar)
+(define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
 
-(global-linum-mode t)
-
-(set-frame-font "Source Code Pro 15" nil t)
 (prelude-require-package 'molokai-theme)
-(prelude-require-package 'monokai-theme)
-(load-theme 'molokai)
 
+(global-set-key (kbd "C-q") 'emacs-surround)
