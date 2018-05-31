@@ -22,10 +22,12 @@
 (require 'prelude-helm-everywhere)
 (require 'prelude-helm)
 (require 'prelude-key-chord)
-;; (require 'prelude-ivy)
+(require 'prelude-ivy)
 
 (define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
 
 (prelude-require-package 'molokai-theme)
+(prelude-require-package 'ag)
+(prelude-require-package 'counsel-projectile)
 
 (global-set-key (kbd "C-q") 'emacs-surround)
