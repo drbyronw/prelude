@@ -2,7 +2,9 @@
 (scroll-bar-mode 0)
 (global-linum-mode t)
 (setq-default cursor-type 'bar)
-(set-frame-font "Source Code Pro 15" nil t)
+;; (set-frame-font "Source Code Pro 15" nil t)
+(set-frame-font "Operator Mono Light 16" nil t)
+
 (global-hl-line-mode t)
 (global-visual-line-mode t)
 
