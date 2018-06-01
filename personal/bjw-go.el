@@ -12,8 +12,9 @@
   (flyspell-mode 0)
   (setq go-tab-width 4)
   (setq tab-width 4)
-  (setenv "GOPATH" "/Users/byron/Nextcloud/godev")
+  ;; (setenv "GOPATH" "/Users/byron/Nextcloud/godev")
   (add-to-list 'exec-path "/Users/byron/Nextcloud/godev/bin")
+  (exec-path-from-shell-copy-env "GOPATH")
   ;; Call Gofmt before saving
   (setq gofmt-command "goimports")
   (setq flycheck-check-syntax-automatically '(mode-enabled save))
@@ -23,8 +24,13 @@
 
   (message "Go MODE Hook Function Executed - bjw/my-go-mode-hook")
   )
+
 (add-hook 'go-mode-hook 'bjw/my-go-mode-hook)
 
+;; https://emacs.stackexchange.com/questions/19506/suppress-warning-assignment-to-free-variable-and-others
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 
 (provide 'bjw-go)
 
