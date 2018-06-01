@@ -7,8 +7,7 @@
 
 (global-hl-line-mode t)
 (global-visual-line-mode t)
-
-(setq prelude-theme 'molokai)
+(when window-system (global-prettify-symbols-mode t))
 
 (setq prelude-theme 'molokai)
 

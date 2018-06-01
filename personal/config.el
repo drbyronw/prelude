@@ -29,12 +29,23 @@
 (prelude-require-package 'molokai-theme)
 (prelude-require-package 'ag)
 (prelude-require-package 'counsel-projectile)
+(prelude-require-package 'ledger-mode)
+(prelude-require-package 'golden-ratio-scroll-screen)
 
 (defalias 'projectile-find-file 'counsel-projectile-find-file)
+(defalias 'helm-projectile-find-file 'counsel-projectile-find-file)
 
-(server-start)
+(smartparens-strict-mode -1)
+
+;; (server-start)
 
 ;; Global Key Configs
 (global-set-key (kbd "C-q") 'emacs-surround)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-x C-k k") 'kill-buffer)
+(global-set-key [remap scroll-down-command] 'golden-ratio-scroll-screen-down)
+(global-set-key [remap scroll-up-command] 'golden-ratio-scroll-screen-up)
+
+;; Global Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
