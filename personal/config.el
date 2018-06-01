@@ -30,4 +30,11 @@
 (prelude-require-package 'ag)
 (prelude-require-package 'counsel-projectile)
 
+(defalias 'projectile-find-file 'counsel-projectile-find-file)
+
+(server-start)
+
+;; Global Key Configs
 (global-set-key (kbd "C-q") 'emacs-surround)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-x C-k k") 'kill-buffer)
