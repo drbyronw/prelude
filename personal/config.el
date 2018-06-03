@@ -31,11 +31,15 @@
 (prelude-require-package 'counsel-projectile)
 (prelude-require-package 'ledger-mode)
 (prelude-require-package 'golden-ratio-scroll-screen)
+(prelude-require-package 'org-bullets)
+(prelude-require-package 'org-autolist)
 
 (defalias 'projectile-find-file 'counsel-projectile-find-file)
 (defalias 'helm-projectile-find-file 'counsel-projectile-find-file)
 
+(org-bullets-mode +1)
 (smartparens-strict-mode -1)
+(whitespace-mode -1)
 
 ;; (server-start)
 
@@ -45,6 +49,9 @@
 (global-set-key (kbd "C-x C-k k") 'kill-buffer)
 (global-set-key [remap scroll-down-command] 'golden-ratio-scroll-screen-down)
 (global-set-key [remap scroll-up-command] 'golden-ratio-scroll-screen-up)
+(global-set-key (kbd "C-x C-m") 'bjw/duplicate-line)
+
+(key-chord-define-global "kk" 'kill-whole-line)
 
 ;; Global Variables:
 ;; byte-compile-warnings: (not free-vars)
