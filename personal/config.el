@@ -37,6 +37,8 @@
 (defalias 'projectile-find-file 'counsel-projectile-find-file)
 (defalias 'helm-projectile-find-file 'counsel-projectile-find-file)
 
+(global-whitespace-mode -1)
+(whitespace-mode -1)
 (smartparens-strict-mode -1)
 
 ;; (server-start)
