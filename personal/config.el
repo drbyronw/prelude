@@ -35,7 +35,7 @@
 (prelude-require-package 'golden-ratio-scroll-screen)
 (prelude-require-package 'org-bullets)
 (prelude-require-package 'org-autolist)
-;; (prelude-require-package 'doom-themes)
+(prelude-require-package 'doom-themes)
 (prelude-require-package 'all-the-icons)
 (prelude-require-package 'neotree)
 (prelude-require-package 'rainbow-delimiters)
@@ -44,11 +44,15 @@
 (defalias 'projectile-find-file 'counsel-projectile-find-file)
 (defalias 'helm-projectile-find-file 'counsel-projectile-find-file)
 
-(setq prelude-whitespace -1)
+(setq prelude-whitespace nil)
 (rainbow-delimiters-mode +1)
 (smartparens-strict-mode -1)
-(setq sml/theme 'light)
+;; (setq sml/theme 'light)
 (global-prettify-symbols-mode +1)
+
+(defvar bjw-doom-themes (expand-file-name "emacs-doom-themes" prelude-personal-dir))
+
+(add-to-list 'load-path bjw-doom-themes)
 ;; (server-start)
 
 ;; Global Key Configs
@@ -65,21 +69,21 @@
 (key-chord-define-global "kk" 'kill-whole-line)
 
 ;; Doom-Themes settings
-;; (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-;;       doom-themes-enable-italic t) ; if nil, italics is universally disabled
+(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+      doom-themes-enable-italic t) ; if nil, italics is universally disabled
 
 ;; ;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
 ;; ;; may have their own settings.
-;; (load-theme 'doom-one t)
+(load-theme 'doom-molokai t)
 
 ;; ;; Enable flashing mode-line on errors
-;; (doom-themes-visual-bell-config)
+(doom-themes-visual-bell-config)
 
 ;; ;; Enable custom neotree theme
-;; (doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
+(doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
 
 ;; ;; Corrects (and improves) org-mode's native fontification.
-;; (doom-themes-org-config)
+(doom-themes-org-config)
 
 ;; Global Variables:
 ;; byte-compile-warnings: (not free-vars)
