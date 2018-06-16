@@ -24,7 +24,7 @@
 ;; (require 'prelude-helm)
 (require 'prelude-key-chord)
 (require 'prelude-ivy)
-(require 'prelude-ido)
+;; (require 'prelude-ido)
 
 ;; (define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
 
@@ -51,6 +51,7 @@
 (rainbow-delimiters-mode +1)
 (smartparens-strict-mode -1)
 (savehist-mode +1)
+(counsel-projectile-mode +1)
 ;; (setq sml/theme 'light)
 (global-prettify-symbols-mode +1)
 
@@ -60,8 +61,10 @@
 
 (setq ivy-use-virtual-buffers t)
 (setq ivy-re-builders-alist
-      '((t . ivy--regex-fuzzy)))
-(setq ido-use-virtual-buffers t)
+      '((swiper . ivy--regex-plus)
+        (t . ivy--regex-fuzzy)))
+(setq ivy-wrap +1)
+;; (setq ido-use-virtual-buffers t)
 
 ;; ledger
 (setq ledger-post-amount-alignment-column 62)

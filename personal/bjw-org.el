@@ -10,6 +10,7 @@
 
   (org-autolist-mode +1)
   (org-indent-mode +1)
+  (org-bullets-mode +1)
 
   (setq org-use-speed-commands t
         org-hide-emphasis-markers t
