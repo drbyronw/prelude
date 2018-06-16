@@ -20,13 +20,13 @@
 ;; predule modules - utilities
 (require 'prelude-org)
 (require 'prelude-company)
-(require 'prelude-helm-everywhere)
-(require 'prelude-helm)
+;; (require 'prelude-helm-everywhere)
+;; (require 'prelude-helm)
 (require 'prelude-key-chord)
 (require 'prelude-ivy)
 (require 'prelude-ido)
 
-(define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
+;; (define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
 
 (prelude-require-package 'molokai-theme)
 (prelude-require-package 'ag)
@@ -40,15 +40,31 @@
 (prelude-require-package 'neotree)
 (prelude-require-package 'rainbow-delimiters)
 (prelude-require-package 'prettier-js)
+(prelude-require-package 's)
+(prelude-require-package 'dash)
+(prelude-require-package 'rjsx-mode)
 
 (defalias 'projectile-find-file 'counsel-projectile-find-file)
-(defalias 'helm-projectile-find-file 'counsel-projectile-find-file)
+;; (defalias 'helm-projectile-find-file 'counsel-projectile-find-file)
 
 (setq prelude-whitespace nil)
 (rainbow-delimiters-mode +1)
 (smartparens-strict-mode -1)
+(savehist-mode +1)
 ;; (setq sml/theme 'light)
 (global-prettify-symbols-mode +1)
+
+;; ace-window settings
+(setq aw-keys '(?j ?k ?l ?i ?o))
+(setq aw-dispatch-always +1)
+
+(setq ivy-use-virtual-buffers t)
+(setq ivy-re-builders-alist
+      '((t . ivy--regex-fuzzy)))
+(setq ido-use-virtual-buffers t)
+
+;; ledger
+(setq ledger-post-amount-alignment-column 62)
 
 (defvar bjw-doom-themes (expand-file-name "emacs-doom-themes" prelude-personal-dir))
 
@@ -58,6 +74,9 @@
 ;; Global Key Configs
 (global-set-key (kbd "C-q") 'emacs-surround)
 (global-set-key (kbd "C-r") 'isearch-forward)
+(global-set-key (kbd "C-x o") 'other-window)
+(global-set-key (kbd "C-x p") 'ace-window)
+(global-set-key (kbd "M-o") 'ace-window)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-x C-k k") 'kill-buffer)
 (global-set-key [remap scroll-down-command] 'golden-ratio-scroll-screen-down)
@@ -66,6 +85,8 @@
 (global-set-key (kbd "s-<up>") 'bjw/move-line-up)
 (global-set-key (kbd "s-<down>") 'bjw/move-line-down)
 
+
+;; personal key chords
 (key-chord-define-global "kk" 'kill-whole-line)
 
 ;; Doom-Themes settings
