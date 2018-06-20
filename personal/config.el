@@ -43,6 +43,8 @@
 (prelude-require-package 's)
 (prelude-require-package 'dash)
 (prelude-require-package 'rjsx-mode)
+(prelude-require-package 'emmet-mode)
+(prelude-require-package 'tagedit)
 
 (defalias 'projectile-find-file 'counsel-projectile-find-file)
 ;; (defalias 'helm-projectile-find-file 'counsel-projectile-find-file)

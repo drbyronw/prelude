@@ -1,5 +1,21 @@
 ;;;
 
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
+(add-hook 'js2-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
+(add-hook 'rjsx-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
+
+(eval-after-load 'sgml-mode
+  '(progn
+     (require 'tagedit)
+     (tagedit-add-paredit-like-keybindings)
+     (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))
+     (add-hook 'js2-mode-hook (lambda () (tagedit-mode 1)))
+     (add-hook 'rjsx-mode-hook (lambda () (tagedit-mode 1)))
+     ))
+
+(tagedit-add-experimental-features)
+
 ;;; JS configuration
 (defun bjw/my-js-mode-hook ()
 
@@ -45,6 +61,9 @@
   (flycheck-add-mode 'javascript-eslint 'js2-mode)
   (flycheck-add-mode 'javascript-eslint 'web-mode)
   )
+(add-hook 'js2-mode-hook 'bjw/my-js-mode-hook)
+(add-hook 'rjsx-mode-hook 'bjw/my-js-mode-hook)
+(add-hook 'web-mode-hook 'bjw/my-js-mode-hook)
 
 ;; Golang Setttings
 (defun bjw/my-go-mode-hook ()
