@@ -35,6 +35,7 @@
 (prelude-require-package 'golden-ratio-scroll-screen)
 (prelude-require-package 'org-bullets)
 (prelude-require-package 'org-autolist)
+(prelude-require-package 'org-journal)
 (prelude-require-package 'doom-themes)
 (prelude-require-package 'all-the-icons)
 (prelude-require-package 'neotree)
@@ -45,6 +46,7 @@
 (prelude-require-package 'rjsx-mode)
 (prelude-require-package 'emmet-mode)
 (prelude-require-package 'tagedit)
+(prelude-require-package 'ein)
 
 (defalias 'projectile-find-file 'counsel-projectile-find-file)
 ;; (defalias 'helm-projectile-find-file 'counsel-projectile-find-file)
