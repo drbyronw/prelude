@@ -73,6 +73,8 @@
 ;; ledger
 (setq ledger-post-amount-alignment-column 62)
 
+(setq prelude-theme 'molokai)
+
 (defvar bjw-doom-themes (expand-file-name "emacs-doom-themes" prelude-personal-dir))
 
 (add-to-list 'load-path bjw-doom-themes)
