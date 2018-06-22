@@ -6,14 +6,17 @@
 ;; (set-frame-font "Operator Mono Light 14" nil t)
 
 (if (eq system-type 'darwin)
-    ((setq mac-command-modifier 'meta)
+    (progn (setq mac-command-modifier 'meta)
      (setq mac-option-modifier 'super))
   )
 
 (if (eq system-type 'darwin)
-     (set-face-attribute 'default t :font "Operator Mono Light 16" )
-   (set-face-attribute 'default t :font "Operator Mono Light 13" )
-  )
+  (progn (add-to-list 'default-frame-alist '(font . "Operator Mono Light 16" ))
+(set-face-attribute 'default t :font "Operator Mono Light 16" ))
+  (progn
+   (set-face-attribute 'default t :font "Operator Mono Light 13")
+   (add-to-list 'default-frame-alist '(font . "Operator Mono Light 16" ))
+  ))
 
 
 (global-hl-line-mode t)
