@@ -49,9 +49,7 @@ func main() {
         fmt.Println(\"3\")
 }")
 
-    ("r" "return")
     ("ps" "+")
-    ("eq" "==")
     ("pt" "fmt.Println(3)")
     ("fu" "func(x int) int { return 1 }")
     ;;

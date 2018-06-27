@@ -13,6 +13,8 @@
                               (eshell/alias "gd" "magit-diff-unstaged")
                               (eshell/alias "gds" "magit-diff-staged")
                               (eshell/alias "d" "dired $1")
+                              (eshell/alias "q" "exit")
+                              (eshell/alias "c" "clear")
 
                               ;; The 'ls' executable requires the Gnu version on the Mac
                               (let ((ls (if (file-exists-p "/usr/local/bin/gls")

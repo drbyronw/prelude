@@ -36,7 +36,9 @@
   ;; (setq tab-width 2)
   (setq flycheck-check-syntax-automatically '(mode-enabled save))
 
+  (add-hook 'js-mode-hook 'js2-mode)
   (add-hook 'js2-mode-hook 'prettier-js-mode)
+  (add-hook 'js2-mode-hook 'rjsx-mode)
   (add-hook 'web-mode-hook 'prettier-js-mode)
   (add-hook 'rjsx-mode-hook 'prettier-js-mode)
 
