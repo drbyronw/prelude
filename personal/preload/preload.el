@@ -1,6 +1,6 @@
 ;; Byron J. Williams Emacs Config Settings
 (scroll-bar-mode 0)
-(global-linum-mode t)
+;; (global-linum-mode t)
 (setq-default cursor-type 'bar)
 ;; (set-frame-font "Source Code Pro 15" nil t)
 ;; (set-frame-font "Operator Mono Light 14" nil t)
