@@ -10,7 +10,7 @@
                     ;; Also handle undocumented (<active> <inactive>) form.
                     ((numberp (cadr alpha)) (cadr alpha)))
               100)
-         '(89 . 80) '(100 . 100)))))
+         '(95 . 90) '(100 . 100)))))
 
 ;; Move line functions
 (defun bjw/move-line (n)

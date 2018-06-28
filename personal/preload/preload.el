@@ -5,7 +5,6 @@
 ;; (set-frame-font "Source Code Pro 15" nil t)
 ;; (set-frame-font "Operator Mono Light 14" nil t)
 
-(set-frame-parameter (selected-frame) 'alpha '(89 . 84))
 (if (eq system-type 'darwin)
     (progn (setq mac-command-modifier 'meta)
      (setq mac-option-modifier 'super))
@@ -18,7 +17,6 @@
    (set-face-attribute 'default t :font "Operator Mono Light 13")
    (add-to-list 'default-frame-alist '(font . "Operator Mono Light 13" ))
   ))
-
 
 (global-hl-line-mode t)
 (global-visual-line-mode t)

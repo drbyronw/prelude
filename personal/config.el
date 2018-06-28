@@ -117,7 +117,7 @@
 ;; ;; Corrects (and improves) org-mode's native fontification.
 (doom-themes-org-config)
 (set-background-color "#050505")
-
+(set-frame-parameter (selected-frame) 'alpha '(95 . 90))
 ;; Global Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
