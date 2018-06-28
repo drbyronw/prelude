@@ -1,5 +1,17 @@
 ;;; functions
 
+(defun toggle-transparency ()
+  (interactive)
+  (let ((alpha (frame-parameter nil 'alpha)))
+    (set-frame-parameter
+     nil 'alpha
+     (if (eql (cond ((numberp alpha) alpha)
+                    ((numberp (cdr alpha)) (cdr alpha))
+                    ;; Also handle undocumented (<active> <inactive>) form.
+                    ((numberp (cadr alpha)) (cadr alpha)))
+              100)
+         '(89 . 80) '(100 . 100)))))
+
 ;; Move line functions
 (defun bjw/move-line (n)
   "Move the current line up or down by N lines."

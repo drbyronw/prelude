@@ -24,6 +24,7 @@
 ;; (require 'prelude-helm)
 (require 'prelude-key-chord)
 (require 'prelude-ivy)
+;; (require 'prelude-evil)
 ;; (require 'prelude-ido)
 
 ;; (define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
@@ -93,6 +94,7 @@
 (global-set-key (kbd "C-x C-m") 'bjw/duplicate-line)
 (global-set-key (kbd "s-<up>") 'bjw/move-line-up)
 (global-set-key (kbd "s-<down>") 'bjw/move-line-down)
+(global-set-key (kbd "C-c C-t") 'toggle-transparency)
 
 
 ;; personal key chords
@@ -114,6 +116,7 @@
 
 ;; ;; Corrects (and improves) org-mode's native fontification.
 (doom-themes-org-config)
+(set-background-color "#050505")
 
 ;; Global Variables:
 ;; byte-compile-warnings: (not free-vars)
