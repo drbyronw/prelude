@@ -94,8 +94,6 @@
 (global-set-key (kbd "C-x C-m") 'bjw/duplicate-line)
 (global-set-key (kbd "s-<up>") 'bjw/move-line-up)
 (global-set-key (kbd "s-<down>") 'bjw/move-line-down)
-(global-set-key (kbd "C-c C-t") 'toggle-transparency)
-
 
 ;; personal key chords
 (key-chord-define-global "kk" 'kill-whole-line)
