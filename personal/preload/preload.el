@@ -14,9 +14,17 @@
   (progn (add-to-list 'default-frame-alist '(font . "Operator Mono Light 16" ))
 (set-face-attribute 'default t :font "Operator Mono Light 16" ))
   (progn
-   (set-face-attribute 'default t :font "Operator Mono Light 13")
-   (add-to-list 'default-frame-alist '(font . "Operator Mono Light 13" ))
-  ))
+    (set-face-attribute 'default t :font "SauceCodePro Nerd Font 13")
+    (add-to-list 'default-frame-alist '(font . "SauceCodePro Nerd Font 13" ))
+   ))
+
+;; (if (eq system-type 'darwin)
+;;     (progn (add-to-list 'default-frame-alist '(font . "Operator Mono Light 16" ))
+;;            (set-face-attribute 'default t :font "Operator Mono Light 16" ))
+;;   (progn
+;;     (set-face-attribute 'default t :font "Operator Mono Light 13")
+;;     (add-to-list 'default-frame-alist '(font . "Operator Mono Light 13" ))
+;;     )) 
 
 (global-hl-line-mode t)
 (global-visual-line-mode t)
